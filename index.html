@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <link rel="stylesheet" href="style.css"/>
+  <title>weatherApp</title>
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">天気予報チェッカー</h2>
+    <p class="desc">郵便番号を入力するだけで、天気予報がチェックできます！</p>
+    <form>
+      <div>
+        <label for="number">郵便番号を入力</label>
+        <input placeholder="7桁郵便番号-なし" value="" id="zipcode" type="number">
+        <p class="alert">※ハイフンは入れないでください。半角数字のみで入力してください。</p>
+      </div>
+      <div>
+        <button id="get-wether">天気を検索</button></button>
+      </div>
+    </form>
+    <div id="place"></div>
+    <table>
+      <thead>
+        <tr>
+          <td>日時</td>
+          <td>湿度</td>
+          <td>天候</td>
+          <td>イラスト</td>
+        </tr>
+      </thead>
+      <tbody  id="weather">
+
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

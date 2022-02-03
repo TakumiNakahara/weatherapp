@@ -44,7 +44,7 @@ document.getElementById('get-wether').addEventListener('click',(e)=>{
     });
 
     // 天気を取得する
-    getAPI.get(`http://api.openweathermap.org/data/2.5/forecast?zip=${postcode},JP&units=metric&lang=ja&APPID=1c86a8833705e2b5db3006dd552b41ba`, function(item){
+    getAPI.get(`https://api.openweathermap.org/data/2.5/forecast?zip=${postcode},JP&units=metric&lang=ja&APPID=**************`, function(item){
       // 初期化
       var itemWrap = document.getElementById('weather');
           itemWrap.innerHTML='';
@@ -54,7 +54,7 @@ document.getElementById('get-wether').addEventListener('click',(e)=>{
       placeList.forEach((item) => {
         var time = item.dt_txt;
         var desc = item.weather[0].description;
-        var icon = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
+        var icon = `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
         var humid = item.main.humidity;
         // DOM操作
         var item = document.createElement('tr');
